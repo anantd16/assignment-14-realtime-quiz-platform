@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Battle — Host</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card" style="max-width: 560px;">
+    <div id="errorBox" class="error-msg"></div>
+
+    <!-- Setup screen -->
+    <div id="setupScreen">
+      <h1>🎪 Host a Quiz</h1>
+      <form id="createForm">
+        <label for="hostName">Your name</label>
+        <input id="hostName" type="text" placeholder="Professor X" required maxlength="24" />
+
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="Tech">Tech</option>
+          <option value="General">General</option>
+        </select>
+
+        <button type="submit">Create Quiz</button>
+      </form>
+    </div>
+
+    <!-- Lobby screen -->
+    <div id="lobbyScreen" class="hidden">
+      <h1>Lobby Open</h1>
+      <p class="subtitle">Share this PIN with players</p>
+      <div class="pin-display" id="pinDisplay">----</div>
+      <p class="status-line" id="lobbyCount">0 players joined</p>
+      <ul class="player-list" id="playerList"></ul>
+      <button id="startBtn" disabled>Start Game</button>
+    </div>
+
+    <!-- In-game screen -->
+    <div id="gameScreen" class="hidden">
+      <p class="status-line" id="questionProgress"></p>
+      <div class="timer-ring" id="timerRing">15</div>
+      <div class="question-text" id="questionText"></div>
+      <div class="options-grid" id="optionsGrid"></div>
+    </div>
+
+    <!-- Reveal / leaderboard screen -->
+    <div id="revealScreen" class="hidden">
+      <h1>✅ Answer Revealed</h1>
+      <p class="status-line" id="explanationText"></p>
+      <p class="subtitle" style="margin-top:20px;">Live Leaderboard</p>
+      <ol class="leaderboard-list" id="leaderboardList"></ol>
+    </div>
+
+    <!-- Final screen -->
+    <div id="endScreen" class="hidden">
+      <h1>🏆 Quiz Complete</h1>
+      <p class="winner-banner" id="winnerBanner"></p>
+      <p class="subtitle" style="margin-top:20px;">Final Standings</p>
+      <ol class="leaderboard-list" id="finalLeaderboardList"></ol>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+  <script>initHostPage();</script>
+</body>
+</html>

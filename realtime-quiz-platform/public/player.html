@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Battle — Player</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="score-toast" id="scoreToast"></div>
+
+  <div class="card">
+    <div id="errorBox" class="error-msg"></div>
+
+    <!-- Join screen -->
+    <div id="joinScreen">
+      <h1>🎮 Join a Quiz</h1>
+      <form id="joinForm">
+        <label for="pinInput">Game PIN</label>
+        <input id="pinInput" type="text" inputmode="numeric" placeholder="8421" maxlength="4" required />
+
+        <label for="playerNameInput">Your name</label>
+        <input id="playerNameInput" type="text" placeholder="Karan" required maxlength="24" />
+
+        <button type="submit">Join Lobby</button>
+      </form>
+    </div>
+
+    <!-- Waiting in lobby -->
+    <div id="waitingScreen" class="hidden">
+      <h1>You're in! 🎉</h1>
+      <p class="status-line">Waiting for the host to start the quiz…</p>
+    </div>
+
+    <!-- In-game screen -->
+    <div id="gameScreen" class="hidden">
+      <p class="status-line" id="questionProgress"></p>
+      <div class="timer-ring" id="timerRing">15</div>
+      <div class="question-text" id="questionText"></div>
+      <div class="options-grid" id="optionsGrid"></div>
+      <p class="status-line" id="answerStatus"></p>
+    </div>
+
+    <!-- Reveal screen -->
+    <div id="revealScreen" class="hidden">
+      <h1 id="revealHeadline">Time's up!</h1>
+      <p class="status-line" id="explanationText"></p>
+      <p class="subtitle" style="margin-top:20px;">Live Leaderboard</p>
+      <ol class="leaderboard-list" id="leaderboardList"></ol>
+    </div>
+
+    <!-- Final screen -->
+    <div id="endScreen" class="hidden">
+      <h1>🏆 Quiz Complete</h1>
+      <p class="winner-banner" id="winnerBanner"></p>
+      <p class="subtitle" style="margin-top:20px;">Final Standings</p>
+      <ol class="leaderboard-list" id="finalLeaderboardList"></ol>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+  <script>initPlayerPage();</script>
+</body>
+</html>

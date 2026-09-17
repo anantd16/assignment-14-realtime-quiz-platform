@@ -1,0 +1,76 @@
+{
+  "Tech": [
+    {
+      "question": "What is Node.js runtime based on?",
+      "options": ["V8", "SpiderMonkey", "Chakra", "JVM"],
+      "correctOption": 0,
+      "explanation": "Node.js is built on Google Chrome's V8 engine."
+    },
+    {
+      "question": "Which HTTP method is idempotent by convention?",
+      "options": ["POST", "PATCH", "PUT", "CONNECT"],
+      "correctOption": 2,
+      "explanation": "PUT is idempotent — repeating the same request produces the same result."
+    },
+    {
+      "question": "What does REST stand for?",
+      "options": [
+        "Real-time State Transfer",
+        "Representational State Transfer",
+        "Remote Session Tracking",
+        "Resource State Table"
+      ],
+      "correctOption": 1,
+      "explanation": "REST stands for Representational State Transfer, an architectural style for APIs."
+    },
+    {
+      "question": "Which data structure does JavaScript use to manage the call stack?",
+      "options": ["Queue", "Stack", "Heap", "Tree"],
+      "correctOption": 1,
+      "explanation": "JavaScript's call stack is, as the name implies, a stack (LIFO)."
+    },
+    {
+      "question": "What does CORS stand for?",
+      "options": [
+        "Cross-Origin Resource Sharing",
+        "Client Origin Request Security",
+        "Cross-Origin Response Standard",
+        "Cached Origin Resource Server"
+      ],
+      "correctOption": 0,
+      "explanation": "CORS stands for Cross-Origin Resource Sharing, a browser security mechanism."
+    }
+  ],
+  "General": [
+    {
+      "question": "What is the largest planet in our solar system?",
+      "options": ["Earth", "Saturn", "Jupiter", "Neptune"],
+      "correctOption": 2,
+      "explanation": "Jupiter is the largest planet in the solar system by both mass and volume."
+    },
+    {
+      "question": "Which ocean is the largest by surface area?",
+      "options": ["Atlantic", "Indian", "Arctic", "Pacific"],
+      "correctOption": 3,
+      "explanation": "The Pacific Ocean is the largest and deepest ocean on Earth."
+    },
+    {
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "options": ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"],
+      "correctOption": 1,
+      "explanation": "William Shakespeare wrote Romeo and Juliet around 1594–96."
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "options": ["Go", "Gd", "Au", "Ag"],
+      "correctOption": 2,
+      "explanation": "Au comes from the Latin word for gold, 'aurum'."
+    },
+    {
+      "question": "How many continents are there on Earth?",
+      "options": ["5", "6", "7", "8"],
+      "correctOption": 2,
+      "explanation": "There are 7 continents: Africa, Antarctica, Asia, Australia, Europe, North America, South America."
+    }
+  ]
+}
